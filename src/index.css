@@ -1,0 +1,71 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background: linear-gradient(135deg, #fff0f3 0%, #ffe6f0 50%, #fff5f8 100%);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .font-romantic {
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  .font-elegant {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .text-love {
+    color: #d946ef;
+    background: linear-gradient(135deg, #ec4899 0%, #d946ef 50%, #f43f5e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .bg-love {
+    background: linear-gradient(135deg, #fce7f3 0%, #fae8ff 50%, #ffe4e6 100%);
+  }
+  
+  .shadow-love {
+    box-shadow: 0 10px 40px rgba(236, 72, 153, 0.2);
+  }
+  
+  .border-love {
+    border-color: #f9a8d4;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-heart {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-heart {
+  animation: pulse-heart 1.5s ease-in-out infinite;
+}
