@@ -33,7 +33,8 @@ interface FlickeringStickersProps {
 }
 
 const randomBetween = (min: number, max: number) => min + Math.random() * (max - min);
-const spreadPercent = (spread: number) => randomBetween(-(spread - 100) / 2, 100 + (spread - 100) / 2);
+const clampPercent = (value: number) => Math.max(0, Math.min(100, value));
+const spreadPercent = (spread: number) => clampPercent(randomBetween(50 - spread / 2, 50 + spread / 2));
 
 const FlickeringStickers = ({
   count = 90,
@@ -105,6 +106,7 @@ const FlickeringStickers = ({
             width: `${sparkle.size}px`,
             height: `${sparkle.size}px`,
             boxShadow: '0 0 10px rgba(255, 192, 203, 0.6)',
+            transform: 'translate(-50%, -50%)',
           }}
           animate={{
             opacity: [0.1, 0.8, 0.1],

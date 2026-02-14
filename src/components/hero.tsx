@@ -10,7 +10,7 @@ export default function Hero() {
     }));
 
     return (
-        <div className="w-full flex items-center justify-center flex-col text-center px-4 sm:px-6 relative overflow-visible py-6 sm:py-8 min-h-screen">
+        <div className="w-full flex items-center justify-center flex-col text-center px-4 sm:px-6 relative overflow-visible py-6 sm:py-8 min-h-screen gap-8">
       <FlickeringStickers count={70} size="text-3xl sm:text-4xl" fullScreen={true} />
             {hearts.map((heart) => (
                 <motion.div

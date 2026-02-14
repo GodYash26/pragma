@@ -3,10 +3,10 @@ import FlickeringStickers from "./FlickeringStickers";
 
 export default function Letter() {
   return (
-    <div className="w-full py-8 sm:py-10 text-center px-4 sm:px-6 flex justify-center relative">
+    <div className="w-full py-8 sm:py-10 text-center px-4 sm:px-6 flex flex-col items-center justify-center relative">
       <FlickeringStickers count={65} size="text-3xl" fullScreen={true} />
       
-      <div className="relative z-10 w-full flex justify-center">
+      <div className="relative z-10 w-full flex flex-col items-center justify-center">
         {/* Background hearts */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(8)].map((_, i) => (

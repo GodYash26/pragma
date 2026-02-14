@@ -13,6 +13,12 @@
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     color: #ffffff;
+    text-align: center;
+  }
+
+  #root {
+    width: 100%;
+    text-align: center;
   }
 }
 

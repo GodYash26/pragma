@@ -24,10 +24,10 @@ const memories = [
 
 export default function Story() {
   return (
-    <div className="w-full py-8 sm:py-10 px-4 sm:px-6 relative">
+    <div className="w-full py-8 sm:py-10 px-4 sm:px-6 relative flex flex-col items-center text-center">
       <FlickeringStickers count={60} size="text-3xl sm:text-4xl" fullScreen={true} />
 
-      <div className="relative z-10">
+      <div className="relative z-10 w-full flex flex-col items-center">
         {/* Decorative Elements */}
         <div className="absolute top-10 left-5 sm:left-10 text-4xl sm:text-6xl opacity-20 animate-float">💕</div>
         <div className="absolute bottom-10 right-5 sm:right-10 text-4xl sm:text-6xl opacity-20 animate-float" style={{ animationDelay: '1s' }}>💝</div>

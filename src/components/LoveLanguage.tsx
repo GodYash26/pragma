@@ -26,10 +26,10 @@ const reasons = [
 
 export default function LoveLanguage() {
   return (
-    <div className="w-full py-8 sm:py-10 px-4 sm:px-6 text-center relative">
+    <div className="w-full py-8 sm:py-10 px-4 sm:px-6 text-center relative flex flex-col items-center">
       <FlickeringStickers count={80} size="text-3xl" fullScreen={true} />
       
-      <div className="relative z-10">
+      <div className="relative z-10 w-full flex flex-col items-center">
         {/* Background decorations */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-5 text-4xl sm:text-5xl opacity-10 animate-float">💝</div>
@@ -39,10 +39,10 @@ export default function LoveLanguage() {
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-4 sm:mb-5 px-4 relative z-10"
+          className="mb-4 sm:mb-5 px-4 relative z-10 w-full text-center"
         >
           <h2 className="text-4xl sm:text-5xl md:text-6xl text-white font-romantic mb-4 animate-shimmer">
             Why You Are Special

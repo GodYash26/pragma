@@ -1,11 +1,13 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 
 const CosmicBackground = () => {
-  const particlesInit = async (engine: any) => {
-    await loadSlim(engine);
-  };
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    });
+  }, []);
 
   const particlesConfig = useMemo(() => ({
     background: {
@@ -68,13 +70,13 @@ const CosmicBackground = () => {
     },
     interactivity: {
       events: {
-        onhover: {
+        onClick: {
           enable: true,
-          mode: 'grab' as const,
+          mode: 'push',
         },
-        onclick: {
+        onHover: {
           enable: true,
-          mode: 'push' as const,
+          mode: 'grab',
         },
       },
       modes: {
@@ -90,12 +92,11 @@ const CosmicBackground = () => {
       },
     },
     detectRetina: true,
-  }), []);
+  } as any), []);
 
   return (
     <Particles
       id="tsparticles"
-      init={particlesInit}
       options={particlesConfig}
       className="fixed inset-0 -z-10"
     />
